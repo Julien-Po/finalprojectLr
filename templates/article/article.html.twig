@@ -1,0 +1,42 @@
+{% block body %}
+
+{{ form_start(form) }}
+<div>  
+{{form_label(form.title)}}
+{{form_widget(form.title)}}
+</div>
+
+<div>  
+{{form_label(form.content)}}
+{{form_widget(form.content)}}
+</div>
+
+<div>  
+{{form_label(form.author)}}
+{{form_widget(form.author)}}
+</div>
+
+<div>  
+{{form_label(form.createdAt)}}
+{{form_widget(form.createdAt)}}
+</div>
+
+<div>  
+{{form_label(form.slug)}}
+{{form_widget(form.slug)}}
+</div>
+
+<div>  
+{{form_label(form.image)}}
+{{form_widget(form.image)}}
+</div>
+
+
+<div>
+{{ form_row(form.submit)}}
+</div>
+
+{{form_end(form)}}
+
+
+{% endblock %}

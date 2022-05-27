@@ -1,0 +1,95 @@
+.mainHeader {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 90%;
+    padding: 0 10vw;
+    color: black;
+    z-index: 1;
+    transition: .4s ease-out;
+
+    .imgLogo {
+        width: 50px;
+        height: 50px;
+    }
+
+    a {
+        text-decoration: none;
+        color: inherit;
+        text-transform: uppercase;
+    }
+
+    .navLinks {
+        display: flex;
+
+        .navLink {
+
+            a {
+                margin: .2rem;
+                padding: 1rem .5rem;
+            }
+
+            a:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+    }
+
+    .menuIcon {
+        position: relative;
+        padding: 26px 10px;
+        z-index: 1;
+        cursor: pointer;
+        display: none;
+
+        .menuIconLine {
+            display: block;
+            position: relative;
+            background: #000;
+            height: 2px;
+            width: 20px;
+            border-radius: 4px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                border-radius: 4px;
+                background: #000;
+                transition: background .8s ease;
+            }
+
+            &::before {
+                transform: translateY(-5px);
+            }
+
+            &::after {
+                transform: translateY(5px);
+            }
+        }
+    }
+
+    .menuBtn {
+        display: none;
+        position: absolute;
+    }
+
+    &.scrolled {
+        height: 50px;
+        background: rgba(0, 0, 0, 0.9);
+        color: #fff;
+
+        .menuIcon {
+
+            .menuIconLine,
+            .menuIconLine::before,
+            .menuIconLine::after {
+                background: white;
+            }
+        }
+    }
+}
