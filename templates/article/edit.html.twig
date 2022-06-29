@@ -1,60 +1,41 @@
 {% block body %}
 
-<link rel="stylesheet" href="{{asset('assets/styles/app.css')}}">
-<h1 class="articleTitle">Création d'un article</h1>
+<h1>Modification d'un article</h1>
 
 {{ form_start(form) }}
-<div class="adminArticle">
-<div>
+<div>  
 {{form_label(form.title)}}
-</div>
-<div>
 {{form_widget(form.title)}}
 </div>
 
-
 <div>  
 {{form_label(form.content)}}
-</div>
-<div>
 {{form_widget(form.content)}}
 </div>
 
-
 <div>  
 {{form_label(form.author)}}
-</div>
-<div>
 {{form_widget(form.author)}}
 </div>
 
 <div>  
 {{form_label(form.createdAt)}}
-</div>
-<div>
 {{form_widget(form.createdAt)}}
 </div>
 
 <div>  
 {{form_label(form.slug)}}
-</div>
-<div>
 {{form_widget(form.slug)}}
 </div>
 
 <div>  
-{{form_label(form.imageFile)}}
+{{form_label(form.image)}}
+{{form_widget(form.image)}}
 </div>
+
+
 <div>
-{{form_widget(form.imageFile)}}
-</div>
-
-
-
-
-<div class="articleSubmit">
 {{ form_row(form.submit)}}
-</div>
 </div>
 
 {{form_end(form)}}

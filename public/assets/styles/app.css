@@ -4,6 +4,7 @@ body {
   overflow-x: hidden;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  height: 100vh;
 }
 
 li {
@@ -167,10 +168,8 @@ li {
 }
 
 .footer {
-  position: block;
-  right: 0;
+  width: 100%;
   bottom: 0;
-  left: 0;
   padding: 1rem;
   background-color: #efefef;
   display: -webkit-box;
@@ -209,5 +208,333 @@ li {
 .allSec .homeSection .homeImg {
   width: 300px;
   height: 200px;
+}
+
+.articleTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.adminArticle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.articleSubmit {
+  margin-top: 10px;
+}
+
+.staticImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 450px;
+  height: 350px;
+  padding-top: 100px;
+}
+
+.staticText {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.gridGall {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-areas: "frst scnd thrd";
+}
+
+@media screen and (max-width: 900px) {
+  .gridGall {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.gridGall .frstProduct {
+  grid-area: "frst";
+}
+
+.gridGall .scndProduct {
+  grid-area: "scnd";
+}
+
+.gridGall .thirdProduct {
+  grid-area: "thrd";
+}
+
+.gridGall .gaImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+.gridGall .gaContent {
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+.joGridTop {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "joImg joTxt";
+}
+
+@media screen and (max-width: 900px) {
+  .joGridTop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.joGridTop .joImg {
+  grid-area: "joImg";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  height: 400px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .joGridTop .joImg {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .joGridTop .joImg {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .joGridTop .joImg {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.joGridTop .joTxt {
+  grid-area: "joTxt";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .joGridTop .joTxt {
+    padding-top: 10px;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.joGridMid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "midTxt midImg";
+}
+
+@media screen and (max-width: 900px) {
+  .joGridMid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.joGridMid .midTxt {
+  grid-area: "midTxt";
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .joGridMid .midTxt {
+    padding-top: 10px;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.joGridMid .midImg {
+  grid-area: "midImg";
+}
+
+.joGridMid .midImg img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  height: 400px;
+}
+
+@media screen and (max-width: 520px) {
+  .joGridMid .midImg img {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .joGridMid .midImg img {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.joGridBot {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "botImg botTxt";
+}
+
+@media screen and (max-width: 900px) {
+  .joGridBot {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.joGridBot .botImg {
+  grid-area: "botImg";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 500px;
+  height: 400px;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .joGridBot .botImg {
+    padding-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .joGridBot .botImg {
+    width: 400px;
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .joGridBot .botImg {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+.joGridBot .botTxt {
+  grid-area: "botTxt";
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-bottom: 30px;
+}
+
+@media screen and (max-width: 900px) {
+  .joGridBot .botTxt {
+    padding-top: 10px;
+    width: 70%;
+    margin: 0 auto;
+  }
+}
+
+.contTitle {
+  padding-top: 300px;
+}
+
+.cardContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+  width: 30%;
+}
+
+.articleGrid {
+  display: -ms-grid;
+  display: grid;
 }
 /*# sourceMappingURL=app.css.map */

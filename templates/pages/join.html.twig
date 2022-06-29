@@ -1,0 +1,52 @@
+{% block head %}
+<link rel="stylesheet" href="{{asset('assets/styles/app.css')}}">
+{% endblock %}
+
+{% block body %}
+<body>
+{% include 'base/nav.html.twig' %}
+<div class="joGridTop">
+<div>
+<img class="joImg" src="{{ asset('assets/img/lrBuildings.jpg') }}" alt="logoLr"></img>
+</div>
+<div class="joTxt">
+<h2>Présentation de l'entreprise</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quis maiores facilis officia saepe in commodi 
+dolores dolore, sed suscipit hic incidunt ab ipsum deleniti consectetur quia quam consequuntur perspiciatis. Sed distinctio 
+aperiam voluptatem libero nemo magnam, officia quisquam alias quo non, hic exercitationem nihil harum obcaecati maxime repellat 
+dolorum quod praesentium ipsa, iure eius. Sint quae quibusdam suscipit tempore voluptas ab fuga corporis repellat ipsam labore 
+autem optio architecto explicabo placeat veniam ullam a rem, modi dignissimos. Atque nam est, iste recusandae tempore suscipit, 
+voluptatum dolores perferendis nostrum mollitia praesentium quidem, illum neque totam ullam dolorem. Rem, iusto obcaecati.</p>
+</div>
+</div>
+<div class="joGridMid">
+<div class="midTxt">
+<h2>Plan de carrière</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quis maiores facilis officia saepe in commodi 
+dolores dolore, sed suscipit hic incidunt ab ipsum deleniti consectetur quia quam consequuntur perspiciatis. Sed distinctio 
+aperiam voluptatem libero nemo magnam, officia quisquam alias quo non, hic exercitationem nihil harum obcaecati maxime repellat 
+dolorum quod praesentium ipsa, iure eius. Sint quae quibusdam suscipit tempore voluptas ab fuga corporis repellat ipsam labore 
+autem optio architecto explicabo placeat veniam ullam a rem, modi dignissimos. Atque nam est, iste recusandae tempore suscipit, 
+voluptatum dolores perferendis nostrum mollitia praesentium quidem, illum neque totam ullam dolorem. Rem, iusto obcaecati.</p>
+</div>
+<div class="midImg">
+<img src="{{ asset('assets/img/figuLr.jpg') }}" alt="logoLr"></img>
+</div>
+</div>
+<div class="joGridbot">
+<div>
+<img class="botImg" src="{{ asset('assets/img/lrQg.png') }}" alt="logoLr"></img>
+</div>
+<div class="botTxt">
+<h2>Recrutement</h2>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi quis maiores facilis officia saepe in commodi 
+dolores dolore, sed suscipit hic incidunt ab ipsum deleniti consectetur quia quam consequuntur perspiciatis. Sed distinctio 
+aperiam voluptatem libero nemo magnam, officia quisquam alias quo non, hic exercitationem nihil harum obcaecati maxime repellat 
+dolorum quod praesentium ipsa, iure eius. Sint quae quibusdam suscipit tempore voluptas ab fuga corporis repellat ipsam labore 
+autem optio architecto explicabo placeat veniam ullam a rem, modi dignissimos. Atque nam est, iste recusandae tempore suscipit, 
+voluptatum dolores perferendis nostrum mollitia praesentium quidem, illum neque totam ullam dolorem. Rem, iusto obcaecati.</p>
+</div>
+</div>
+</body>
+{% include 'base/footer.html.twig' %}
+{% endblock %} 

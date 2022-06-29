@@ -1,0 +1,42 @@
+.gridGall {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+        "frst scnd thrd"
+    ;
+
+    @media screen and (max-width:900px) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .frstProduct {
+        grid-area: "frst";
+    }
+
+    .scndProduct {
+        grid-area: "scnd";
+    }
+
+    .thirdProduct {
+        grid-area: "thrd";
+    }
+
+    .gaImg {
+        display: flex;
+        margin: 0 auto;
+        width: 300px;
+        height: 200px;
+        padding-top: 150px;
+        padding-bottom: 30px;
+    }
+
+    .gaContent {
+        width: 60%;
+        margin: 0 auto;
+        padding-bottom: 30px;
+        text-align: center;
+    }
+
+
+}

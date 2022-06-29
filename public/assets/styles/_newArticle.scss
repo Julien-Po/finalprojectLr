@@ -1,0 +1,16 @@
+    .articleTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .adminArticle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .articleSubmit {
+        margin-top: 10px;
+    }

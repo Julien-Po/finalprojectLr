@@ -1,0 +1,16 @@
+{% block head %}
+<link rel="stylesheet" href="{{asset('assets/styles/app.css')}}">
+{% endblock %}
+
+{% block body %}
+<body>
+{% include 'base/nav.html.twig' %}
+<h1 class="contTitle">Vous avez des questions ?</h1>
+<img src="{{asset('assets/img/chronologoback.png')}}" class="cardContact">
+<h2 class="contLine">Posez les sur mon adresse mail : katiapoirier.60@gmail.com</h2>
+<p>Ou sur nos réseaux présents en bas de page !</p>
+{% include 'base/footer.html.twig' %}
+</body>
+
+
+{% endblock %}
