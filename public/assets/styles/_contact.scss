@@ -1,9 +1,24 @@
 .contTitle {
-    padding-top: 300px;
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cardContact {
     display: flex;
     margin: 0 auto;
     width: 30%;
+}
+
+.contLine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

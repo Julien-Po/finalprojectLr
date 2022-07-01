@@ -30,7 +30,6 @@ class ArticleType extends AbstractType
             ->add('author', TextType::class, [
                 'label' => 'Auteur'
             ])
-            ->add('slug')
             ->add('createdAt', DateType::class, [
                 'label' => 'Date de création'
             ])

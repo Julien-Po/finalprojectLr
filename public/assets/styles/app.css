@@ -191,7 +191,7 @@ li {
   padding-bottom: 200px;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1011px) {
   .allSec {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -371,6 +371,7 @@ li {
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 30px;
+  width: 80%;
 }
 
 @media screen and (max-width: 900px) {
@@ -403,7 +404,7 @@ li {
 
 .joGridMid .midTxt {
   grid-area: "midTxt";
-  width: 90%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -412,6 +413,7 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
+  margin-left: 50px;
 }
 
 @media screen and (max-width: 900px) {
@@ -511,6 +513,7 @@ li {
   margin: 0 auto;
   padding-top: 150px;
   padding-bottom: 30px;
+  width: 80%;
 }
 
 @media screen and (max-width: 900px) {
@@ -522,7 +525,16 @@ li {
 }
 
 .contTitle {
-  padding-top: 300px;
+  padding-top: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .cardContact {
@@ -533,8 +545,105 @@ li {
   width: 30%;
 }
 
+.contLine {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .articleGrid {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 100px;
+}
+
+.articleGrid .article {
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+.articleGrid .articleTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: left;
+}
+
+.articleGrid .articleContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articleGrid .articleAuthor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.articleGrid .articleImg {
+  width: 250px;
+  height: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.articleGrid .managementBtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 15px;
+}
+
+.articleGrid .managementBtns a {
+  text-decoration: none;
 }
 /*# sourceMappingURL=app.css.map */

@@ -1,5 +1,14 @@
 {% block body %}
-<div>
-    <p>{{articles.content}}</p>  
-</div>
+    <div>
+        <h2 class="detailTitle">{{article.title}}</h2>  
+    </div>
+    <div>
+        <h3 class="detailAuthor">{{article.author}}</h3>
+    </div>
+    <div>
+        <p class="detailContent">{{article.content}}</p> 
+    </div>
+    <div>
+        <img src="{{ vich_uploader_asset(article, 'imageFile') }}">
+    </div> 
 {% endblock %}

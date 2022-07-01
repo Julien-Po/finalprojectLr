@@ -16,12 +16,13 @@ use App\Repository\ArticleRepository;
 class ArticleController extends AbstractController
 {
 
-    #[Route('/{id}/show' , name : 'each_article')]
-    public function eachArticle(Article $article) : Response
+    #[Route('/article/show/{id}' , name : 'each_article')]
+    public function eachArticle(ArticleRepository $repository, int $id) : Response
 
     {
+        $article = $repository->findOneBy(["id" => $id]);
         return $this->render("article/show.html.twig" ,[
-            "display" => $article
+            'article'=>$article
         ]);
     }
 
@@ -56,10 +57,23 @@ class ArticleController extends AbstractController
             ]);
     }
 
-    #[Route('/newarticle/{id}', name: 'edit_article', methods:['GET','POST'])]
-    public function editArticle(ArticleRepository $repository, int $id) : Response
+    #[Route('/article/update/{id}', name: 'edit_article', methods:['GET','POST'])]
+    public function editArticle(ArticleRepository $repository, int $id, Request $request, EntityManagerInterface $manager) : Response
     {
+
+        $article = new Article();
         $article = $repository->findOneBy(["id" => $id]);
+        $form = $this->createForm(ArticleType::class, $article);
+
+        $form->handleRequest($request);
+        if ($form->isSubmitted() && $form->isValid())
+        {
+           $article = $form->getData();
+
+           $manager->persist($article);
+           $manager->flush();
+        }
+      
         $form = $this->createForm(ArticleType::class, $article);
         return $this->render('article/edit.html.twig',[
             'form' => $form->createView()
@@ -74,9 +88,9 @@ class ArticleController extends AbstractController
 
             $this->addFlash(
                 'success',
-                'Votre ingredient a été modifié avec succès !'
+                'Votre ingredient a été supprimé avec succès !'
             );
 
-        return $this->redirectToRoute('article.html.twig');
+        return $this->redirectToRoute('app_home');
     }
     }

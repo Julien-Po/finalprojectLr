@@ -3,33 +3,19 @@
 {% endblock %}
 
 {% block body %}
-{% for articles in article %}
+{% include 'base/nav.html.twig' %}
 <div class="articleGrid">
-    <div>
-        <p class="articleTitle">{{articles.title}}</p>  
+{% for articles in article %}
+    <div class="article">
+            <h2 class="articleTitle">{{articles.title}}</h2>  
+            <img src="{{ vich_uploader_asset(articles, 'imageFile') }}" class="articleImg"> 
+            <h3 class="articleAuthor">{{articles.author}}</h3>
+            <p class="articleContent">{{articles.content|slice(0,30)}}</p>    
+            <div class ="managementBtns">   
+            <a href="{{path('each_article', {"id" : articles.id}) }}">Voir</a>
+            <a href="{{path('delete_article', { id: articles.id}) }}">Supprimer</a>
+            <a href="{{path('edit_article', { id: articles.id}) }}">Modifier</a>
+            </div> 
     </div>
-    <div>
-        <p class="articleAuthor">{{articles.author}}</p>
-    </div>
-    <div>
-        <p class="articleContent">{{articles.content}}</p> 
-    </div>
-    <div>
-        <img src="{{ vich_uploader_asset(articles, 'imageFile') }}">
-    </div> 
-    <div>
-        <a href="{{path('delete_article', { id: article.id}) }}">Supprimer</a>
-    </div>
-    <div>
-        <a href="{{path('edit_article', { id: article.id}) }}">Modifier</a>
-    </div>
-</div>
-
-
-     
-
-{# <div>
-<a href="{{path('each_article', {"id" : article.id}) }}"></a>
-</div> #}
 {% endfor %}
 {% endblock %}
